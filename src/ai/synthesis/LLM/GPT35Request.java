@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 
 public class GPT35Request {
   private static final String URL_GPT_TURBO = "https://api.openai.com/v1/chat/completions";
-  private static final String API_KEY = "";
+  private static final String API_KEY = "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";
   private static final String REQUEST_BODY_GPT_TURBO =
     "{\n" +
       "  \"model\": \"gpt-3.5-turbo\",\n" +

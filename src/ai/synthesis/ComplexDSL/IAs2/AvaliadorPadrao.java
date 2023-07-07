@@ -41,6 +41,7 @@ public class AvaliadorPadrao implements Avaliador {
     }
 
   public void addTojs(Node_LS j) {
+    this.js.clear();
     this.js.add(j);
   }
 

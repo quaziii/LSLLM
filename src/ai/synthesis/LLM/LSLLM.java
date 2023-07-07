@@ -31,7 +31,7 @@ public class LSLLM {    // Local Search + LLM
         ava.addTojs(j1);
         isSuccess = true;
       } catch (Exception e) {
-        System.out.println(e.toString());
+//        System.out.println(e.toString());
       }
     }
     isSuccess = false;
@@ -44,7 +44,7 @@ public class LSLLM {    // Local Search + LLM
       Node_LS searchStart = j;
       double rLLM = -99999.0;
 
-      System.out.println("At the beginning: " + Control.save(j));
+//      System.out.println("At the beginning: " + Control.save(j));
 
       for (int i = 0; i < 7; i++) {
 //        System.out.println("i = " + i);
@@ -80,7 +80,7 @@ public class LSLLM {    // Local Search + LLM
         if (r0 > r1) {
           ava.update(gs, max, c0);
           foundInLLM = true;
-          System.out.println("LLM counter strategy: " + Control.save(c0));
+//          System.out.println("LLM counter strategy: " + Control.save(c0));
           break;
         }
 
@@ -109,7 +109,7 @@ public class LSLLM {    // Local Search + LLM
 
       if(r0>r1) {
         ava.update(gs, max, c0);
-        System.out.println("At the end: " + Control.save(c0));
+//        System.out.println("At the end: " + Control.save(c0));
       }
 
     }
@@ -121,7 +121,7 @@ public class LSLLM {    // Local Search + LLM
     PhysicalGameState pgs = PhysicalGameState.load(path_map, utt);
     GameState gs2 = new GameState(pgs, utt);
 
-    LSLLM test = new LSLLM(new HC(2000), new AvaliadorPadrao(1));
+    LSLLM test = new LSLLM(new HC(2000), new AvaliadorPadrao(5));
     test.run(gs2, 6000);
   }
 }
